@@ -7,6 +7,7 @@ const ALL_CONTENT = { ...ARTICLE_CONTENT, ...REMAINING_CONTENT };
 import NewsletterForm from '../../newsletter-form';
 import ShareButtons from '../../../components/share-buttons';
 import Comments from '../../../components/comments';
+import TrendingWidget from '../../../components/trending-widget';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -119,6 +120,9 @@ export default async function ArticlePage(props: { params: { slug: string } }) {
 
       <div className="mt-10">
         <NewsletterForm />
+      </div>
+      <div className="mt-8">
+        <TrendingWidget />
       </div>
       <Comments articleSlug={props.params.slug} />
     </div>
