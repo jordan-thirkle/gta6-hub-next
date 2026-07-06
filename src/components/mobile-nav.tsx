@@ -8,6 +8,7 @@ const links = [
   { href: '/news', label: 'News' },
   { href: '/editions', label: 'Editions' },
   { href: '/guides', label: 'Guides' },
+  { href: '/gallery', label: 'Gallery' },
   { href: '/map', label: 'Map' },
   { href: '/vehicles', label: 'Vehicles' },
   { href: '/articles', label: 'Articles' },
