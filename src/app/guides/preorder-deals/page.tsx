@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import NewsletterForm from '../../newsletter-form';
+import AffiliateCard from '../../../components/affiliate-card';
 
 const retailers = [
   { name: 'PlayStation Store', type: 'Digital', platform: 'PS5', bonus: 'Standard preorder bonuses', url: '/' },
@@ -52,6 +53,28 @@ export default function PreorderDealsPage() {
 
       <div className="mt-6 p-4 border border-border">
         <p className="text-xs text-tertiary font-mono">Note: Links are placeholder. Update with actual retailer URLs before publishing. Prices and bonuses subject to change.</p>
+      </div>
+
+      {/* Affiliate cards */}
+      <div className="mt-8 grid md:grid-cols-2 gap-4">
+        <AffiliateCard
+          title="GTA 6 Standard Edition"
+          description="Base game with preorder bonuses"
+          price="$69.99"
+          href="/articles/gta-6-preorder-editions-guide"
+          cta="Preorder now"
+          badge="Best value"
+          accent="pink"
+        />
+        <AffiliateCard
+          title="GTA 6 Collector's Edition"
+          description="Steelbook, map, art prints + Ultimate digital content"
+          price="$199.99"
+          href="/articles/gta-6-collectors-edition-contents"
+          cta="View contents"
+          badge="Limited stock"
+          accent="cyan"
+        />
       </div>
 
       <div className="mt-10">

@@ -5,6 +5,7 @@ import { GT6_FACTS } from '../../gta6-facts';
 
 const ALL_CONTENT = { ...ARTICLE_CONTENT, ...REMAINING_CONTENT };
 import NewsletterForm from '../../newsletter-form';
+import ShareButtons from '../../../components/share-buttons';
 import Comments from '../../../components/comments';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -23,6 +24,11 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       description: article?.summary,
       type: 'article',
       publishedTime: '2026-07-03',
+      authors: ['GTA 6 Hub'],
+    },
+    other: {
+      'article:published_time': '2026-07-03',
+      'article:author': 'GTA 6 Hub',
     },
   };
 }
@@ -62,6 +68,8 @@ export default async function ArticlePage(props: { params: { slug: string } }) {
       <Link href="/articles" className="text-xs text-tertiary underline">&larr; All articles</Link>
       <h1 className="mt-6 text-3xl md:text-4xl tracking-tight">{article.title}</h1>
       <p className="mt-3 text-secondary leading-relaxed">{article.summary}</p>
+
+      <ShareButtons title={article.title} description={article.summary} className="mt-4" />
 
       {/* Expanded article body */}
       {contentData?.body && (

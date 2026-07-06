@@ -1,12 +1,17 @@
 import Link from 'next/link';
 import NewsletterForm from '../../newsletter-form';
+import ShareButtons from '../../../components/share-buttons';
 import { YoutubeEmbed, GallerySection } from '../../media';
 import { GT6_FACTS } from '../../gta6-facts';
 import Comments from '../../../components/comments';
 
 export const metadata = {
   title: 'GTA 6 Trailer Breakdown: Every Detail Confirmed',
-  description: 'Complete breakdown of both official GTA 6 trailers. Release dates, vehicles, characters, setting, and every confirmed detail.'
+  description: 'Complete breakdown of both official GTA 6 trailers. Release dates, vehicles, characters, setting, and every confirmed detail.',
+  other: {
+    'article:published_time': '2026-07-03',
+    'article:author': 'GTA 6 Hub',
+  },
 };
 
 export default function TrailerBreakdownPage() {
@@ -17,6 +22,12 @@ export default function TrailerBreakdownPage() {
       <Link href="/articles" className="text-xs text-tertiary underline">&larr; All articles</Link>
       <h1 className="mt-6 text-3xl md:text-4xl tracking-tight">GTA 6 Trailer Breakdown</h1>
       <p className="mt-2 text-secondary">Every confirmed detail from both official Rockstar trailers.</p>
+
+      <ShareButtons
+        title="GTA 6 Trailer Breakdown: Every Detail Confirmed"
+        description="Complete breakdown of both official GTA 6 trailers."
+        className="mt-4"
+      />
 
       <GallerySection title="Trailer 1 — September 17, 2023">
         <YoutubeEmbed id="QdBZY2fUAvM" title="Grand Theft Auto VI Trailer 1" />

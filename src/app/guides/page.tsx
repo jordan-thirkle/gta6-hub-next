@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import NewsletterForm from '../newsletter-form';
+import AffiliateCard from '../../components/affiliate-card';
 
 export default function GuidesPage() {
   const sections = [
@@ -71,6 +72,31 @@ export default function GuidesPage() {
       <div className="mt-12 border-t border-border pt-8">
         <h2 className="text-base font-medium">All Articles</h2>
         <Link href="/articles" className="mt-2 inline-block text-xs underline">Browse all 26+ articles →</Link>
+      </div>
+
+      {/* Preorder deals affiliate section */}
+      <div className="mt-8 border-t border-border pt-8">
+        <h2 className="text-base font-medium mb-4">Preorder Deals</h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          <AffiliateCard
+            title="GTA 6 Preorder — Best Retailers"
+            description="Compare PlayStation Store, Xbox, Amazon, GameStop, Best Buy deals"
+            price="$69.99+"
+            href="/guides/preorder-deals"
+            cta="Compare deals"
+            badge="Partner offer"
+            accent="cyan"
+          />
+          <AffiliateCard
+            title="Ultimate Edition Guide"
+            description="Is the $99.99 premium tier worth it?"
+            price="$99.99"
+            href="/articles/gta-6-ultimate-edition-worth-it"
+            cta="Read review"
+            badge="Partner offer"
+            accent="purple"
+          />
+        </div>
       </div>
 
       <div className="mt-10">

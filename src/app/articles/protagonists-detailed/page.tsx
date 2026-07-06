@@ -1,12 +1,17 @@
 import Link from 'next/link';
 import NewsletterForm from '../../newsletter-form';
+import ShareButtons from '../../../components/share-buttons';
 import { YoutubeEmbed, GallerySection } from '../../media';
 import { GT6_FACTS } from '../../gta6-facts';
 import Comments from '../../../components/comments';
 
 export const metadata = {
   title: 'GTA 6 Protagonists: Lucia and Jason',
-  description: 'Everything confirmed about Lucia and Jason, the lead protagonists of Grand Theft Auto VI.'
+  description: 'Everything confirmed about Lucia and Jason, the lead protagonists of Grand Theft Auto VI.',
+  other: {
+    'article:published_time': '2026-07-03',
+    'article:author': 'GTA 6 Hub',
+  },
 };
 
 export default function ProtagonistsPage() {
@@ -16,6 +21,12 @@ export default function ProtagonistsPage() {
     <div className="py-12 max-w-3xl">
       <Link href="/articles" className="text-xs text-tertiary underline">&larr; All articles</Link>
       <h1 className="mt-6 text-3xl md:text-4xl tracking-tight">Meet the Protagonists: Lucia and Jason</h1>
+
+      <ShareButtons
+        title="GTA 6 Protagonists: Lucia and Jason"
+        description="Everything confirmed about Lucia and Jason, the lead protagonists of Grand Theft Auto VI."
+        className="mt-4"
+      />
 
       <GallerySection title="Lucia — First Protagonist">
         <p className="text-sm text-secondary">Lucia was introduced in the first trailer released September 17, 2023. She is seen in multiple settings throughout both trailers — from a prison jumpsuit to high-end Vice City nightlife. Her story arc appears to center on breaking free of her past and building a new life in Vice City.</p>

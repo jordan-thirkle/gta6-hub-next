@@ -188,5 +188,40 @@ export const ARTICLES: Article[] = [
     summary: 'Expected performance of GTA 6 on PlayStation 5. Resolution, frame rate, haptic feedback, adaptive triggers, and SSD speed.',
     slug: 'gta-6-ps5-performance-dualsense',
     factIds: ['platforms-launch', 'game-size']
+  },
+  {
+    id: 'gta-6-online-modes',
+    title: 'GTA 6 Online: Expected Features and Launch Timeline',
+    summary: 'What to expect from GTA 6 Online. Cross-play, battle pass, persistent world, and integration with GTA+ subscription.',
+    slug: 'gta-6-online-features-launch',
+    factIds: ['platforms-launch']
+  },
+  {
+    id: 'gta-6-soundtrack',
+    title: 'GTA 6 Soundtrack: Radio Stations and Music Predictions',
+    summary: 'Expected radio stations and soundtrack for GTA 6. Genre variety, licensed tracks, and original score predictions.',
+    slug: 'gta-6-soundtrack-radio-stations',
+    factIds: ['setting']
+  },
+  {
+    id: 'gta-6-graphics',
+    title: 'GTA 6 Graphics: RAGE Engine Upgrades and Visual Fidelity',
+    summary: 'Next-generation RAGE engine upgrades for GTA 6. Ray tracing, global illumination, draw distances, and visual comparison to GTA 5.',
+    slug: 'gta-6-graphics-rage-engine',
+    factIds: ['setting']
+  },
+  {
+    id: 'gta-6-story-predictions',
+    title: 'GTA 6 Story Predictions: Plot Theories Based on Trailers',
+    summary: 'Fan theories and plot predictions for GTA 6 based on official trailers. Lucia and Jason story arc analysis.',
+    slug: 'gta-6-story-predictions-theories',
+    factIds: ['lead-protagonists', 'setting']
+  },
+  {
+    id: 'gta-6-accessibility',
+    title: 'GTA 6 Accessibility Features: What to Expect at Launch',
+    summary: 'Expected accessibility options in GTA 6. Difficulty settings, controller customization, subtitle options, and colorblind modes.',
+    slug: 'gta-6-accessibility-features',
+    factIds: ['platforms-launch']
   }
 ];

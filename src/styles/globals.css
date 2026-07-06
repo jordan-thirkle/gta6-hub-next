@@ -141,6 +141,21 @@
     box-shadow: 0 0 10px rgba(255, 45, 149, 0.2), 0 0 20px rgba(255, 45, 149, 0.1);
     transform: translateY(-2px);
   }
+  .neon-card-blue:hover {
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2), 0 0 20px rgba(0, 212, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  .neon-card-cyan:hover {
+    border-color: #00f5d4;
+    box-shadow: 0 0 10px rgba(0, 245, 212, 0.2), 0 0 20px rgba(0, 245, 212, 0.1);
+    transform: translateY(-2px);
+  }
+  .neon-card-purple:hover {
+    border-color: #b44dff;
+    box-shadow: 0 0 10px rgba(180, 77, 255, 0.2), 0 0 20px rgba(180, 77, 255, 0.1);
+    transform: translateY(-2px);
+  }
 
   /* Neon borders */
   .neon-border {

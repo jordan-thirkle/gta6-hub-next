@@ -2,7 +2,7 @@ import { GT6_FACTS } from './gta6-facts';
 import NewsletterForm from './newsletter-form';
 import CountdownTimer from './countdown';
 import LaunchWeekSchedule from './launch-week';
-import { AffiliateLink, AdSlot } from './monetize';
+import AffiliateCard from '../components/affiliate-card';
 import Link from 'next/link';
 
 export default function Home() {
@@ -149,12 +149,38 @@ export default function Home() {
             <span className="inline-block border-b border-neon-cyan/30 pb-2">Preorder &amp; Partners</span>
           </h2>
           <div className="mt-8 grid md:grid-cols-3 gap-5">
-            <AffiliateLink title="Check current console deals" href="/news" label="View offers" />
-            <AffiliateLink title="Compare digital vs physical" href="/guides" label="Read guide" />
-            <AffiliateLink title="Edition breakdown" href="/articles/gta-6-preorder-editions-guide" label="See editions" />
+            <AffiliateCard
+              title="Check current console deals"
+              description="Best prices on PS5 and Xbox Series X|S bundles"
+              price="$69.99+"
+              href="/news"
+              cta="View offers"
+              badge="Partner offer"
+              accent="pink"
+            />
+            <AffiliateCard
+              title="Compare digital vs physical"
+              description="Which format gives you the best value?"
+              price="From $69.99"
+              href="/guides"
+              cta="Read guide"
+              badge="Partner offer"
+              accent="blue"
+            />
+            <AffiliateCard
+              title="Edition breakdown"
+              description="Standard, Deluxe, Ultimate, Collector compared"
+              price="$69.99–$199.99"
+              href="/articles/gta-6-preorder-editions-guide"
+              cta="See editions"
+              badge="Partner offer"
+              accent="cyan"
+            />
           </div>
           <div className="mt-8">
-            <AdSlot label="Sponsor slot" />
+            <div className="border border-dashed border-border p-8 text-center text-[10px] text-tertiary font-mono">
+              <span>Sponsor slot — wire TinyAdz / Carbon / custom placement</span>
+            </div>
           </div>
         </div>
       </section>

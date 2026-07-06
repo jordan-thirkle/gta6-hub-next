@@ -1,6 +1,7 @@
 'use client';
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ShareButtons from '../../components/share-buttons';
 import { VEHICLES, getVehiclesByCategory } from './data';
 
 const CATEGORIES = ['All', 'Car', 'Motorcycle', 'Air', 'Water', 'Emergency', 'Industrial'] as const;
@@ -32,6 +33,8 @@ export default function VehiclesPage() {
         {' / '}
         <span className="text-[#ffd166]">{leakCount} leaked/credible</span>.
       </p>
+
+      <ShareButtons title="GTA 6 Vehicles Database" description="Full list of every vehicle confirmed in GTA 6 trailers" className="mt-4" />
 
       {/* ── Search + Category Tabs ── */}
       <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
