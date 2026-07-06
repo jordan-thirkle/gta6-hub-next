@@ -24,6 +24,8 @@ export default function FooterNav() {
             key={link.href}
             href={link.href}
             className={`hover:text-accent transition-colors text-xs ${isActive ? 'text-accent' : 'text-tertiary'}`}
+            aria-current={isActive ? 'page' : undefined}
+            aria-label={`${link.label} page`}
           >
             {link.label}
           </Link>

@@ -24,7 +24,7 @@ export default function LaunchWeekSchedule() {
         ))}
       </div>
       <div className="mt-6">
-        <Link href="/articles" className="text-xs underline">View all articles</Link>
+        <Link href="/articles" className="text-xs underline" aria-label="View all GTA 6 articles">View all articles</Link>
       </div>
     </div>
   );

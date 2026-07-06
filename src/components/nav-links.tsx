@@ -9,6 +9,7 @@ const links = [
   { href: '/vehicles', label: 'Vehicles' },
   { href: '/articles', label: 'Articles' },
   { href: '/faq', label: 'FAQ' },
+  { href: '/search', label: 'Search', icon: true },
 ];
 
 export default function NavLinks() {
@@ -24,7 +25,7 @@ export default function NavLinks() {
             className={`hover:text-accent transition-colors text-sm ${isActive ? 'text-accent' : ''}`}
             aria-current={isActive ? 'page' : undefined}
           >
-            {link.label}
+            {link.icon ? '🔍' : ''} {link.label}
           </Link>
         );
       })}

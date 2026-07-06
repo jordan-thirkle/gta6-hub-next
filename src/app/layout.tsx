@@ -100,7 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <span aria-hidden="true" className="mx-2">·</span>
               <span>Not affiliated with Rockstar Games</span>
               <span aria-hidden="true" className="mx-2">·</span>
-              <a href="/sitemap.xml" className="underline hover:text-accent transition-colors">Sitemap</a>
+              <a href="/sitemap.xml" className="underline hover:text-accent transition-colors" aria-label="Sitemap page">Sitemap</a>
             </p>
           </div>
         </footer>

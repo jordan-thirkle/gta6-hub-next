@@ -88,7 +88,7 @@ export const ARTICLES: Article[] = [
     id: 'map-size-comparison',
     title: 'GTA 6 Map Size Compared to GTA 5 and Red Dead Redemption 2',
     summary: 'Based on trailer analysis, GTA 6 Vice City map appears significantly larger than GTA 5. Size comparison with previous Rockstar games.',
-    slug: 'gta-6-map-size-comparison',
+    slug: 'gta-6-map-size-vs-gta-5-rdr2',
     factIds: ['setting']
   },
   {
@@ -223,5 +223,40 @@ export const ARTICLES: Article[] = [
     summary: 'Expected accessibility options in GTA 6. Difficulty settings, controller customization, subtitle options, and colorblind modes.',
     slug: 'gta-6-accessibility-features',
     factIds: ['platforms-launch']
+  },
+  {
+    id: 'map-size-comparison-expanded',
+    title: 'GTA 6 Map Size Comparison: Vice City vs GTA 5, Los Santos, and Liberty City',
+    summary: 'Comprehensive breakdown of how Vice City compares to GTA 5, Los Santos, and Liberty City using trailer data and community mapping.',
+    slug: 'gta-6-map-size-comparison',
+    factIds: ['setting', 'map-leak-size']
+  },
+  {
+    id: 'vehicles-complete-list',
+    title: 'GTA 6 Vehicles Complete List: Every Car and Vehicle from Both Trailers',
+    summary: 'Expanded catalog of every vehicle spotted in GTA 6 trailers — sports cars, boats, aircraft, motorcycles, emergency vehicles, and more.',
+    slug: 'gta-6-vehicles-complete-list',
+    factIds: ['vehicles-trailer']
+  },
+  {
+    id: 'online-mode-predictions',
+    title: 'GTA 6 Online Mode Predictions: What GTA Online 2 Could Look Like',
+    summary: 'Based on leaks and industry trends, predictions for GTA Online 2 — persistent world, cross-play, battle passes, and economy changes.',
+    slug: 'gta-6-online-mode-predictions',
+    factIds: ['online-mode']
+  },
+  {
+    id: 'story-predictions-detailed',
+    title: 'GTA 6 Story Predictions: Plot Theories Based on Trailer Cutscenes',
+    summary: 'Deep-dive story predictions based on every cutscene and narrative clue from both official GTA 6 trailers.',
+    slug: 'gta-6-story-predictions',
+    factIds: ['lead-protagonists', 'setting', 'story-leaks']
+  },
+  {
+    id: 'soundtrack-artists-speculation',
+    title: 'GTA 6 Soundtrack Artists: Radio Stations and Music Lineup Predictions',
+    summary: 'Speculation on artists, radio stations, and the soundtrack for GTA 6 based on trailer music, leaks, and Rockstar licensing patterns.',
+    slug: 'gta-6-soundtrack-artists',
+    factIds: ['soundtrack-licensing', 'setting']
   }
 ];

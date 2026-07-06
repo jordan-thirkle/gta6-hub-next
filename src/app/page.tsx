@@ -67,6 +67,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
                 className="neon-card group block rounded-lg p-5"
+                aria-label={`${item.claim} — source: ${item.sourceName}`}
               >
                 <p className="text-sm text-text-main leading-relaxed group-hover:text-neon-pink transition-colors">
                   {item.claim}
@@ -90,33 +91,37 @@ export default function Home() {
             <Link
               href="/news"
               className="neon-card group block rounded-lg p-5 text-center"
+              aria-label="News — Latest updates from the streets"
             >
-              <div className="text-3xl mb-3">📰</div>
-              <div className="text-sm font-medium text-text-main group-hover:text-neon-pink transition-colors">News</div>
+              <div className="text-3xl mb-3" aria-hidden="true">📰</div>
+              <h3 className="text-sm font-medium text-text-main group-hover:text-neon-pink transition-colors">News</h3>
               <p className="text-[11px] text-text-muted mt-1.5 leading-relaxed">Latest updates from the streets</p>
             </Link>
             <Link
               href="/guides"
               className="neon-card group block rounded-lg p-5 text-center"
+              aria-label="Guides — Strategies & walkthroughs"
             >
-              <div className="text-3xl mb-3">📖</div>
-              <div className="text-sm font-medium text-text-main group-hover:text-neon-blue transition-colors">Guides</div>
+              <div className="text-3xl mb-3" aria-hidden="true">📖</div>
+              <h3 className="text-sm font-medium text-text-main group-hover:text-neon-blue transition-colors">Guides</h3>
               <p className="text-[11px] text-text-muted mt-1.5 leading-relaxed">Strategies &amp; walkthroughs</p>
             </Link>
             <Link
               href="/articles"
               className="neon-card group block rounded-lg p-5 text-center"
+              aria-label="Articles — Deep dives & analysis"
             >
-              <div className="text-3xl mb-3">📝</div>
-              <div className="text-sm font-medium text-text-main group-hover:text-neon-purple transition-colors">Articles</div>
+              <div className="text-3xl mb-3" aria-hidden="true">📝</div>
+              <h3 className="text-sm font-medium text-text-main group-hover:text-neon-purple transition-colors">Articles</h3>
               <p className="text-[11px] text-text-muted mt-1.5 leading-relaxed">Deep dives &amp; analysis</p>
             </Link>
             <Link
               href="/faq"
               className="neon-card group block rounded-lg p-5 text-center"
+              aria-label="FAQ — Answers to burning questions"
             >
-              <div className="text-3xl mb-3">❓</div>
-              <div className="text-sm font-medium text-text-main group-hover:text-neon-cyan transition-colors">FAQ</div>
+              <div className="text-3xl mb-3" aria-hidden="true">❓</div>
+              <h3 className="text-sm font-medium text-text-main group-hover:text-neon-cyan transition-colors">FAQ</h3>
               <p className="text-[11px] text-text-muted mt-1.5 leading-relaxed">Answers to burning questions</p>
             </Link>
           </div>
@@ -125,17 +130,19 @@ export default function Home() {
             <Link
               href="/map"
               className="neon-card group block rounded-lg p-5 text-center"
+              aria-label="Map — Interactive Vice City map"
             >
-              <div className="text-3xl mb-3">🗺️</div>
-              <div className="text-sm font-medium text-text-main group-hover:text-neon-cyan transition-colors">Map</div>
+              <div className="text-3xl mb-3" aria-hidden="true">🗺️</div>
+              <h3 className="text-sm font-medium text-text-main group-hover:text-neon-cyan transition-colors">Map</h3>
               <p className="text-[11px] text-text-muted mt-1.5 leading-relaxed">Interactive Vice City map</p>
             </Link>
             <Link
               href="/vehicles"
               className="neon-card group block rounded-lg p-5 text-center"
+              aria-label="Vehicles — Full vehicle database"
             >
-              <div className="text-3xl mb-3">🚗</div>
-              <div className="text-sm font-medium text-text-main group-hover:text-neon-pink transition-colors">Vehicles</div>
+              <div className="text-3xl mb-3" aria-hidden="true">🚗</div>
+              <h3 className="text-sm font-medium text-text-main group-hover:text-neon-pink transition-colors">Vehicles</h3>
               <p className="text-[11px] text-text-muted mt-1.5 leading-relaxed">Full vehicle database</p>
             </Link>
           </div>

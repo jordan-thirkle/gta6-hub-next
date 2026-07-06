@@ -90,9 +90,10 @@ export default function AffiliateCard({
         href={href}
         {...(extraProps as Record<string, string>)}
         className={`mt-4 inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono uppercase tracking-wider rounded transition-all duration-200 ${ctaColor}`}
+        aria-label={`${cta} for ${title}`}
       >
         {cta}
-        <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+        <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
           <path d="M5 12h14M12 5l7 7-7 7" />
         </svg>
       </Comp>

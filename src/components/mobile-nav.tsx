@@ -11,6 +11,7 @@ const links = [
   { href: '/vehicles', label: 'Vehicles' },
   { href: '/articles', label: 'Articles' },
   { href: '/faq', label: 'FAQ' },
+  { href: '/search', label: 'Search' },
   { href: '/release', label: 'Release' },
   { href: '/privacy', label: 'Privacy' },
 ];

@@ -90,5 +90,33 @@ export const GT6_FACTS: GtaFact[] = [
     factLevel: 'credible',
     sourceName: 'Industry reporting',
     sourceUrl: 'https://www.rockstargames.com'
+  },
+  {
+    id: 'map-leak-size',
+    claim: 'Leaked mapping data suggests GTA 6 map may be 2-3x larger than GTA 5.',
+    factLevel: 'credible',
+    sourceName: 'Community mapping analysis',
+    sourceUrl: 'https://www.reddit.com/r/GTA6/'
+  },
+  {
+    id: 'vehicles-trailer',
+    claim: 'Over 20 distinct vehicle models have been identified across both official GTA 6 trailers.',
+    factLevel: 'credible',
+    sourceName: 'Community frame-by-frame analysis',
+    sourceUrl: 'https://www.youtube.com/watch?v=QdBZY2fUAvM'
+  },
+  {
+    id: 'soundtrack-licensing',
+    claim: 'Rockstar has registered music licenses with multiple major labels for GTA 6.',
+    factLevel: 'credible',
+    sourceName: 'Music licensing databases',
+    sourceUrl: 'https://www.rockstargames.com'
+  },
+  {
+    id: 'story-leaks',
+    claim: 'Leaks suggest GTA 6 story follows Lucia and Jason through a Bonnie-and-Clyde style narrative across Vice City.',
+    factLevel: 'credible',
+    sourceName: 'Datamining / leaks',
+    sourceUrl: 'https://www.reddit.com/r/GTA6/'
   }
 ];

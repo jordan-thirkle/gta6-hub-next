@@ -37,7 +37,7 @@ export default function NewsletterForm() {
   };
 
   return (
-    <form onSubmit={submit} className="w-full max-w-md mx-auto">
+    <form onSubmit={submit} className="w-full max-w-md mx-auto" aria-label="Newsletter sign-up form">
       <div className="flex flex-col sm:flex-row gap-2">
         <input
           type="email"
@@ -46,11 +46,13 @@ export default function NewsletterForm() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@example.com"
           disabled={status === 'loading'}
-          className="flex-1 border border-border bg-transparent px-3 py-2 text-sm text-text-main placeholder:text-text-muted/50 focus:border-neon-pink/50 focus:outline-none transition-colors disabled:opacity-50"
+          aria-label="Email address for newsletter"
+          className="flex-1 border border-border bg-transparent px-3 py-2 text-sm text-text-main placeholder:text-text-muted/50 focus:border-neon-pink/50 focus:outline-none focus:ring-1 focus:ring-neon-pink/30 transition-colors disabled:opacity-50"
         />
         <button
           type="submit"
           disabled={status === 'loading' || !consented || !email}
+          aria-label={status === 'loading' ? 'Subscribing...' : 'Subscribe to newsletter'}
           className="border border-neon-pink/40 text-neon-pink px-5 py-2 text-sm font-mono uppercase tracking-wider hover:bg-neon-pink/10 hover:border-neon-pink/70 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
         >
           {status === 'loading' ? (
@@ -74,6 +76,7 @@ export default function NewsletterForm() {
           checked={consented}
           onChange={(e) => setConsented(e.target.checked)}
           disabled={status === 'loading'}
+          aria-label="I agree to receive email updates"
           className="mt-0.5 accent-neon-pink"
         />
         <span className="text-[11px] text-text-muted leading-relaxed group-hover:text-text-secondary transition-colors">
@@ -87,8 +90,8 @@ export default function NewsletterForm() {
 
       {/* Status messages */}
       {status === 'success' && (
-        <p className="mt-3 text-xs text-neon-cyan flex items-center gap-1.5">
-          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <p className="mt-3 text-xs text-neon-cyan flex items-center gap-1.5" role="status" aria-live="polite">
+          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
             <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
             <polyline points="22 4 12 14.01 9 11.01" />
           </svg>
@@ -96,8 +99,8 @@ export default function NewsletterForm() {
         </p>
       )}
       {status === 'error' && (
-        <p className="mt-3 text-xs text-neon-pink flex items-center gap-1.5">
-          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <p className="mt-3 text-xs text-neon-pink flex items-center gap-1.5" role="alert" aria-live="assertive">
+          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
             <circle cx="12" cy="12" r="10" />
             <line x1="15" y1="9" x2="9" y2="15" />
             <line x1="9" y1="9" x2="15" y2="15" />
