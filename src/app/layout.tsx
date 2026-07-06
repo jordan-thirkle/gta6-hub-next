@@ -5,6 +5,7 @@ import NavLinks from '../components/nav-links';
 import FooterNav from '../components/footer-nav';
 import MobileNav from '../components/mobile-nav';
 import ThemeToggle from '../components/theme-toggle';
+import ExitIntentPopup from '../components/exit-intent-popup';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -128,6 +129,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main-content" role="main" className="max-w-page min-h-[60vh]">
           {children}
         </main>
+        <ExitIntentPopup />
 
         <footer role="contentinfo" className="border-t border-border py-8 mt-16">
           <div className="max-w-page text-center space-y-2">
