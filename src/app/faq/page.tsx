@@ -26,8 +26,25 @@ export const metadata: Metadata = {
 };
 
 export default function FaqPage() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  };
+
   return (
     <div className="py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <h1 className="text-3xl md:text-4xl tracking-tight">GTA 6 FAQ</h1>
       <p className="mt-2 text-secondary">Every confirmed answer about Grand Theft Auto VI. {faqs.length} questions answered.</p>
       <div className="mt-8 space-y-3">

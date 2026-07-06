@@ -58,15 +58,47 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              name: 'GTA 6 Hub',
-              url: 'https://gta6-hub-next.vercel.app',
-              description: 'Countdown to GTA 6. Verified facts only.',
-              potentialAction: {
-                '@type': 'SearchAction',
-                target: 'https://gta6-hub-next.vercel.app/search?q={search_term_string}',
-                'query-input': 'required name=search_term_string',
-              },
+              '@graph': [
+                {
+                  '@type': 'WebSite',
+                  name: 'GTA 6 Hub',
+                  url: 'https://gta6-hub-next.vercel.app',
+                  description: 'Countdown to GTA 6. Verified facts only.',
+                  potentialAction: {
+                    '@type': 'SearchAction',
+                    target: 'https://gta6-hub-next.vercel.app/search?q={search_term_string}',
+                    'query-input': 'required name=search_term_string',
+                  },
+                },
+                {
+                  '@type': 'VideoGame',
+                  name: 'Grand Theft Auto VI',
+                  applicationCategory: 'Game',
+                  description: 'Upcoming open-world action-adventure game set in Vice City.',
+                  datePublished: '2026-11-19',
+                  publisher: { '@type': 'Organization', name: 'Rockstar Games' },
+                  gamePlatform: ['PlayStation 5', 'Xbox Series X/S'],
+                  genre: ['Action Adventure', 'Open World', 'Racing', 'Shooter'],
+                  sameAs: [
+                    'https://www.rockstargames.com/VI',
+                    'https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI',
+                  ],
+                  offers: {
+                    '@type': 'Offer',
+                    price: '69.99',
+                    priceCurrency: 'USD',
+                    availability: 'https://schema.org/PreOrder',
+                  },
+                },
+                {
+                  '@type': 'Organization',
+                  name: 'GTA 6 Hub',
+                  url: 'https://gta6-hub-next.vercel.app',
+                  sameAs: [
+                    'https://github.com/jordan-thirkle/gta6-hub-next',
+                  ],
+                },
+              ],
             }),
           }}
         />
