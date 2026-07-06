@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { HiCheck, HiX, HiShoppingCart, HiArrowRight } from 'react-icons/hi';
+import Breadcrumbs from '../../components/breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'GTA 6 Editions Comparison',
@@ -116,6 +117,10 @@ const FEATURE_NAMES = EDITIONS[0].features.map(f => f.name);
 export default function EditionsPage() {
   return (
     <main className="mx-auto max-w-page px-4 py-24 min-h-screen">
+      <Breadcrumbs items={[
+        { label: 'Editions', href: '/editions' },
+        { label: 'Compare All Editions' },
+      ]} />
       {/* Hero */}
       <header className="text-center mb-16">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neon-pink/20 bg-neon-pink/5 text-neon-pink text-xs font-mono tracking-wider mb-4">

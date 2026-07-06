@@ -8,6 +8,7 @@ import NewsletterForm from '../../newsletter-form';
 import ShareButtons from '../../../components/share-buttons';
 import Comments from '../../../components/comments';
 import TrendingWidget from '../../../components/trending-widget';
+import Breadcrumbs from '../../../components/breadcrumbs';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -66,6 +67,10 @@ export default async function ArticlePage(props: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <Breadcrumbs items={[
+        { label: 'Articles', href: '/articles' },
+        { label: article.title },
+      ]} />
       <Link href="/articles" className="text-xs text-tertiary underline">&larr; All articles</Link>
       <h1 className="mt-6 text-3xl md:text-4xl tracking-tight">{article.title}</h1>
       <p className="mt-3 text-secondary leading-relaxed">{article.summary}</p>
