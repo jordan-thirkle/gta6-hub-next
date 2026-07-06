@@ -4,9 +4,13 @@ import Link from 'next/link';
 import NavLinks from '../components/nav-links';
 import FooterNav from '../components/footer-nav';
 import MobileNav from '../components/mobile-nav';
+import ThemeToggle from '../components/theme-toggle';
 
 export const viewport: Viewport = {
-  themeColor: '#050508',
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#050508' },
+    { media: '(prefers-color-scheme: light)', color: '#f5f0ff' },
+  ],
   width: 'device-width',
   initialScale: 1,
 };
@@ -114,7 +118,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <nav aria-label="Main navigation" className="flex items-center gap-6 text-sm">
               <NavLinks />
             </nav>
-            <MobileNav />
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <MobileNav />
+            </div>
           </div>
         </header>
 

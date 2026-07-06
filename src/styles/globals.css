@@ -21,6 +21,28 @@
     --color-error: #ef476f;
   }
 
+  [data-theme="light"] {
+    --color-bg: #f5f0ff;
+    --color-surface: #ffffff;
+    --color-border: #e0d8f0;
+    --color-border-strong: #c8b8e0;
+    --color-text: #1a1a2e;
+    --color-text-secondary: #555588;
+    --color-text-tertiary: #7a7aab;
+    --color-accent: #d02070;
+    --color-accent-hover: #b01860;
+    --color-accent-secondary: #0088cc;
+    --color-success: #00a080;
+    --color-warning: #cc9900;
+    --color-error: #cc2244;
+  }
+
+  [data-theme="light"] body {
+    background-image:
+      linear-gradient(rgba(80, 30, 120, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(80, 30, 120, 0.04) 1px, transparent 1px);
+  }
+
   * {
     box-sizing: border-box;
   }
